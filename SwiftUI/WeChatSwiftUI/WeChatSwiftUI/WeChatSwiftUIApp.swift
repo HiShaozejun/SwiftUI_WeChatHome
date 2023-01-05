@@ -1,0 +1,108 @@
+//
+//  WeChatSwiftUIApp.swift
+//  WeChatSwiftUI
+//
+//  Created by shaozejun on 2023/1/5.
+//
+
+import SwiftUI
+
+//程序入口，类似AppDelegate
+@main
+struct WeChatSwiftUIApp: App {
+    // 这里定义的变量都是全局变量，伴随app的生命周期
+    
+    //App生命周期关联,属性包装器
+    @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
+    //等价于
+//    private var appDelegate = UIApplicationDelegateAdaptor(AppDelegate.self)
+    
+    // 监听App的活跃状态
+    @Environment(\.scenePhase) private var scenePhase: ScenePhase
+    
+    var body: some Scene {
+        WindowGroup {
+            //初始根视图
+            TabMenu()
+            
+        }.onChange(of: scenePhase) { newValue in
+            //监听App的状态
+            switch newValue {
+            case .background:
+                print("App进入后台")
+                break
+                
+            case .inactive:
+                print("App进入非活跃状态")
+                break
+                
+            case .active:
+                print("App进入活跃状态")
+                break
+                
+            @unknown default:
+                break
+            }
+        }
+    }
+}
+
+/**
+    UIKit中 通过AppDelegate管理App的生命周期
+    在SwiftUI中，需要借助UIKit，通过属性包装器进行关联
+ */
+
+class AppDelegate: NSObject,UIApplicationDelegate {
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        
+        print("didFinishLaunchingWithOptions")
+        appConfig()
+        
+        return true
+    }
+    
+    /**
+        初始化全局配置
+     */
+    func appConfig() {
+        
+        //设置Tabbar
+        let itemAppearance = UITabBarItemAppearance()
+        let appearance = UITabBarAppearance()
+        
+        //图片颜色
+        itemAppearance.normal.iconColor = .orange
+        itemAppearance.selected.iconColor = .red
+        
+        //文本颜色
+        itemAppearance.normal.titleTextAttributes = [.foregroundColor:UIColor.orange]
+        itemAppearance.selected.titleTextAttributes = [.foregroundColor:UIColor.red]
+        
+        appearance.stackedLayoutAppearance = itemAppearance
+        appearance.configureWithDefaultBackground()
+        
+        if #available(iOS 15.0, *) {
+            UITabBar.appearance().scrollEdgeAppearance = appearance
+        } else {
+            UITabBar.appearance().standardAppearance = appearance
+        }
+        
+        //全局设置navBar的毛玻璃效果
+        let naviBarAppearance = UINavigationBarAppearance()
+        naviBarAppearance.configureWithDefaultBackground()
+        UINavigationBar.appearance().standardAppearance = naviBarAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = naviBarAppearance
+    }
+}
+
+
+
+
+
+/**
+    Preview Content文件夹
+    Preview Assets 主要是存放测试图片，在App上线时，不会打包到ipa中
+    该文件夹下的资源也不会被打包到ipa中
+ */
+
