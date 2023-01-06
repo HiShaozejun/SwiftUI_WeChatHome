@@ -12,6 +12,7 @@ import SwiftUI
  */
 struct MessageListView: View {
     
+    @State private var isShowDetail = false
     // 测试数据
     var message: [MessageInfoModel] = {
         var list = [MessageInfoModel]();
@@ -39,13 +40,11 @@ struct MessageListView: View {
                 
                 //移除row右侧的箭头,三维空间堆叠，设置opacity
                 ZStack {
-                    
                     NavigationLink {
                         DetailView(navTitle: message.title)
                     } label: {
                         EmptyView()
                     }.opacity(0)
-
                     ListRowView(message: message)
                 }
             } //设置List的样式，默认是卡片的样式，两边留有间距
@@ -66,6 +65,8 @@ struct MessageListView: View {
                     
                 }.padding(.horizontal,5)
             }
+        }.onAppear{
+            
         }
     }
 }
