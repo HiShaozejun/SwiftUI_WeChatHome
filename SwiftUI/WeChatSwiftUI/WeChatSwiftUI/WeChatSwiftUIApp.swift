@@ -32,7 +32,13 @@ struct WeChatSwiftUIApp: App {
 //            FormDemo()
             
             //PickerView
-            SwiftUI_Picker()
+//            SwiftUI_Picker()
+            
+            //Alert
+//            SwiftUI_Alert()
+            
+            // 动画
+            SwiftUI_Animation()
            
         }.onChange(of: scenePhase) { newValue in
             //监听App的状态

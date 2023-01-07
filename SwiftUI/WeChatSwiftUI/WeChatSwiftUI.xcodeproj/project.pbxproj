@@ -26,6 +26,8 @@
 		83669CBD2967B79600B7642E /* SwiftUI_Adaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CBC2967B79600B7642E /* SwiftUI_Adaptor.swift */; };
 		83669CBF29680BB600B7642E /* SwiftUI_TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CBE29680BB600B7642E /* SwiftUI_TextField.swift */; };
 		83669CC129686EFD00B7642E /* SwiftUI_Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CC029686EFD00B7642E /* SwiftUI_Picker.swift */; };
+		83669CC329690AB600B7642E /* SwiftUI_Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CC229690AB600B7642E /* SwiftUI_Alert.swift */; };
+		83669CC5296917C200B7642E /* SwiftUI_Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CC4296917C200B7642E /* SwiftUI_Animation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		83669CBC2967B79600B7642E /* SwiftUI_Adaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Adaptor.swift; sourceTree = "<group>"; };
 		83669CBE29680BB600B7642E /* SwiftUI_TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_TextField.swift; sourceTree = "<group>"; };
 		83669CC029686EFD00B7642E /* SwiftUI_Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Picker.swift; sourceTree = "<group>"; };
+		83669CC229690AB600B7642E /* SwiftUI_Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Alert.swift; sourceTree = "<group>"; };
+		83669CC4296917C200B7642E /* SwiftUI_Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Animation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 				83669CBC2967B79600B7642E /* SwiftUI_Adaptor.swift */,
 				83669CBE29680BB600B7642E /* SwiftUI_TextField.swift */,
 				83669CC029686EFD00B7642E /* SwiftUI_Picker.swift */,
+				83669CC229690AB600B7642E /* SwiftUI_Alert.swift */,
+				83669CC4296917C200B7642E /* SwiftUI_Animation.swift */,
 			);
 			path = "SwiftUI知识点";
 			sourceTree = "<group>";
@@ -222,12 +228,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83669CC5296917C200B7642E /* SwiftUI_Animation.swift in Sources */,
 				83669C8D2966E37700B7642E /* TabMenu.swift in Sources */,
 				83669C792966B8FE00B7642E /* SwiftUI_Image.swift in Sources */,
 				83669C7229668EB800B7642E /* MyContentView.swift in Sources */,
 				83669C882966DD1E00B7642E /* Message.swift in Sources */,
 				83669CB92966EF9800B7642E /* MineView.swift in Sources */,
 				83669CBF29680BB600B7642E /* SwiftUI_TextField.swift in Sources */,
+				83669CC329690AB600B7642E /* SwiftUI_Alert.swift in Sources */,
 				83669C872966DD1E00B7642E /* ListRowView.swift in Sources */,
 				83669CB72966EF8E00B7642E /* FindView.swift in Sources */,
 				83669C862966DD1E00B7642E /* DetailView.swift in Sources */,
