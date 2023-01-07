@@ -9,6 +9,10 @@ import SwiftUI
 
 struct TabMenu: View {
     
+    init() {
+        
+    }
+    
     var body: some View {
         
         TabView {

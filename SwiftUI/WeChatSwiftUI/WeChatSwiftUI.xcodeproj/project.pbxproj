@@ -23,6 +23,9 @@
 		83669CB72966EF8E00B7642E /* FindView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CB62966EF8E00B7642E /* FindView.swift */; };
 		83669CB92966EF9800B7642E /* MineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CB82966EF9800B7642E /* MineView.swift */; };
 		83669CBB2967025100B7642E /* SwiftUI_Life.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CBA2967025100B7642E /* SwiftUI_Life.swift */; };
+		83669CBD2967B79600B7642E /* SwiftUI_Adaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CBC2967B79600B7642E /* SwiftUI_Adaptor.swift */; };
+		83669CBF29680BB600B7642E /* SwiftUI_TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CBE29680BB600B7642E /* SwiftUI_TextField.swift */; };
+		83669CC129686EFD00B7642E /* SwiftUI_Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CC029686EFD00B7642E /* SwiftUI_Picker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		83669CB62966EF8E00B7642E /* FindView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindView.swift; sourceTree = "<group>"; };
 		83669CB82966EF9800B7642E /* MineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineView.swift; sourceTree = "<group>"; };
 		83669CBA2967025100B7642E /* SwiftUI_Life.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Life.swift; sourceTree = "<group>"; };
+		83669CBC2967B79600B7642E /* SwiftUI_Adaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Adaptor.swift; sourceTree = "<group>"; };
+		83669CBE29680BB600B7642E /* SwiftUI_TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_TextField.swift; sourceTree = "<group>"; };
+		83669CC029686EFD00B7642E /* SwiftUI_Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Picker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,9 @@
 				83669C7A2966B91E00B7642E /* SwiftUI_ForEach.swift */,
 				83669C7E2966CD5D00B7642E /* SwiftUI_ToolBar.swift */,
 				83669CBA2967025100B7642E /* SwiftUI_Life.swift */,
+				83669CBC2967B79600B7642E /* SwiftUI_Adaptor.swift */,
+				83669CBE29680BB600B7642E /* SwiftUI_TextField.swift */,
+				83669CC029686EFD00B7642E /* SwiftUI_Picker.swift */,
 			);
 			path = "SwiftUI知识点";
 			sourceTree = "<group>";
@@ -218,15 +227,18 @@
 				83669C7229668EB800B7642E /* MyContentView.swift in Sources */,
 				83669C882966DD1E00B7642E /* Message.swift in Sources */,
 				83669CB92966EF9800B7642E /* MineView.swift in Sources */,
+				83669CBF29680BB600B7642E /* SwiftUI_TextField.swift in Sources */,
 				83669C872966DD1E00B7642E /* ListRowView.swift in Sources */,
 				83669CB72966EF8E00B7642E /* FindView.swift in Sources */,
 				83669C862966DD1E00B7642E /* DetailView.swift in Sources */,
 				83669C7F2966CD5D00B7642E /* SwiftUI_ToolBar.swift in Sources */,
 				83669C7B2966B91E00B7642E /* SwiftUI_ForEach.swift in Sources */,
 				83669C8F2966E42200B7642E /* MessageListView.swift in Sources */,
+				83669CC129686EFD00B7642E /* SwiftUI_Picker.swift in Sources */,
 				83669CB52966EF8600B7642E /* ContactsView.swift in Sources */,
 				83669C64296668FD00B7642E /* WeChatSwiftUIApp.swift in Sources */,
 				83669CBB2967025100B7642E /* SwiftUI_Life.swift in Sources */,
+				83669CBD2967B79600B7642E /* SwiftUI_Adaptor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +375,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -393,7 +405,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

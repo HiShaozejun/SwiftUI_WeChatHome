@@ -8,23 +8,32 @@
 import SwiftUI
 
 //程序入口，类似AppDelegate
+@available(iOS 15.0, *)
 @main
 struct WeChatSwiftUIApp: App {
-    // 这里定义的变量都是全局变量，伴随app的生命周期
-    
+
     //App生命周期关联,属性包装器
     @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
     //等价于
 //    private var appDelegate = UIApplicationDelegateAdaptor(AppDelegate.self)
     
-    // 监听App的活跃状态
+    // 监听App的活跃状态， \. 代表系统
     @Environment(\.scenePhase) private var scenePhase: ScenePhase
     
     var body: some Scene {
+        
+        //window窗口
         WindowGroup {
-            //初始根视图
-            TabMenu()
+            //wechat demo
+//            TabMenu()
             
+            //表单demo
+//            MyTextField()
+//            FormDemo()
+            
+            //PickerView
+            SwiftUI_Picker()
+           
         }.onChange(of: scenePhase) { newValue in
             //监听App的状态
             switch newValue {
@@ -67,6 +76,9 @@ class AppDelegate: NSObject,UIApplicationDelegate {
      */
     func appConfig() {
         
+        //设置视图滚动时，收起键盘
+        UIScrollView.appearance().keyboardDismissMode = .onDrag
+        
         //设置Tabbar
         let itemAppearance = UITabBarItemAppearance()
         let appearance = UITabBarAppearance()
@@ -93,6 +105,7 @@ class AppDelegate: NSObject,UIApplicationDelegate {
         naviBarAppearance.configureWithDefaultBackground()
         UINavigationBar.appearance().standardAppearance = naviBarAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = naviBarAppearance
+        
     }
 }
 
