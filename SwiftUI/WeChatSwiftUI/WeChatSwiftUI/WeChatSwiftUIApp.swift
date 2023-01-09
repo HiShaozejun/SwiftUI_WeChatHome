@@ -38,7 +38,12 @@ struct WeChatSwiftUIApp: App {
 //            SwiftUI_Alert()
             
             // 动画
-            SwiftUI_Animation()
+//            SwiftUI_Animation() // 动画
+//            SwiftUI_OffSetAnimation() // 偏移动画
+//            SwiftUI_SpringAnimation() // 弹性动画
+//            SwiftUI_BoradAnimation() // 水波纹动画
+            SwiftUI_DisplayAndDismiss() //从无到有的动画
+            
            
         }.onChange(of: scenePhase) { newValue in
             //监听App的状态

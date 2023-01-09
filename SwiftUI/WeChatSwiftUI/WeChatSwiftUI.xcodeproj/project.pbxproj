@@ -28,6 +28,10 @@
 		83669CC129686EFD00B7642E /* SwiftUI_Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CC029686EFD00B7642E /* SwiftUI_Picker.swift */; };
 		83669CC329690AB600B7642E /* SwiftUI_Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CC229690AB600B7642E /* SwiftUI_Alert.swift */; };
 		83669CC5296917C200B7642E /* SwiftUI_Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CC4296917C200B7642E /* SwiftUI_Animation.swift */; };
+		83669CC729695C3400B7642E /* SwiftUI_BoradAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CC629695C3400B7642E /* SwiftUI_BoradAnimation.swift */; };
+		83669CC9296BE04800B7642E /* SwiftUI_DisplayAndDismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CC8296BE04800B7642E /* SwiftUI_DisplayAndDismiss.swift */; };
+		83669CCB296BFD3900B7642E /* SwiftUI_ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CCA296BFD3900B7642E /* SwiftUI_ViewBuilder.swift */; };
+		83669CCD296BFF3900B7642E /* SwiftUI_Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CCC296BFF3900B7642E /* SwiftUI_Group.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +57,10 @@
 		83669CC029686EFD00B7642E /* SwiftUI_Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Picker.swift; sourceTree = "<group>"; };
 		83669CC229690AB600B7642E /* SwiftUI_Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Alert.swift; sourceTree = "<group>"; };
 		83669CC4296917C200B7642E /* SwiftUI_Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Animation.swift; sourceTree = "<group>"; };
+		83669CC629695C3400B7642E /* SwiftUI_BoradAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_BoradAnimation.swift; sourceTree = "<group>"; };
+		83669CC8296BE04800B7642E /* SwiftUI_DisplayAndDismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_DisplayAndDismiss.swift; sourceTree = "<group>"; };
+		83669CCA296BFD3900B7642E /* SwiftUI_ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_ViewBuilder.swift; sourceTree = "<group>"; };
+		83669CCC296BFF3900B7642E /* SwiftUI_Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Group.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,10 @@
 				83669CC029686EFD00B7642E /* SwiftUI_Picker.swift */,
 				83669CC229690AB600B7642E /* SwiftUI_Alert.swift */,
 				83669CC4296917C200B7642E /* SwiftUI_Animation.swift */,
+				83669CC629695C3400B7642E /* SwiftUI_BoradAnimation.swift */,
+				83669CC8296BE04800B7642E /* SwiftUI_DisplayAndDismiss.swift */,
+				83669CCA296BFD3900B7642E /* SwiftUI_ViewBuilder.swift */,
+				83669CCC296BFF3900B7642E /* SwiftUI_Group.swift */,
 			);
 			path = "SwiftUI知识点";
 			sourceTree = "<group>";
@@ -232,10 +244,13 @@
 				83669C8D2966E37700B7642E /* TabMenu.swift in Sources */,
 				83669C792966B8FE00B7642E /* SwiftUI_Image.swift in Sources */,
 				83669C7229668EB800B7642E /* MyContentView.swift in Sources */,
+				83669CCD296BFF3900B7642E /* SwiftUI_Group.swift in Sources */,
 				83669C882966DD1E00B7642E /* Message.swift in Sources */,
 				83669CB92966EF9800B7642E /* MineView.swift in Sources */,
 				83669CBF29680BB600B7642E /* SwiftUI_TextField.swift in Sources */,
 				83669CC329690AB600B7642E /* SwiftUI_Alert.swift in Sources */,
+				83669CCB296BFD3900B7642E /* SwiftUI_ViewBuilder.swift in Sources */,
+				83669CC9296BE04800B7642E /* SwiftUI_DisplayAndDismiss.swift in Sources */,
 				83669C872966DD1E00B7642E /* ListRowView.swift in Sources */,
 				83669CB72966EF8E00B7642E /* FindView.swift in Sources */,
 				83669C862966DD1E00B7642E /* DetailView.swift in Sources */,
@@ -245,6 +260,7 @@
 				83669CC129686EFD00B7642E /* SwiftUI_Picker.swift in Sources */,
 				83669CB52966EF8600B7642E /* ContactsView.swift in Sources */,
 				83669C64296668FD00B7642E /* WeChatSwiftUIApp.swift in Sources */,
+				83669CC729695C3400B7642E /* SwiftUI_BoradAnimation.swift in Sources */,
 				83669CBB2967025100B7642E /* SwiftUI_Life.swift in Sources */,
 				83669CBD2967B79600B7642E /* SwiftUI_Adaptor.swift in Sources */,
 			);
