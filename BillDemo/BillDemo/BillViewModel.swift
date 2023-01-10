@@ -11,7 +11,7 @@
 import Foundation
 
 class BillViewModel: ObservableObject{
-    //使用Published包装器
+    //使用Published包装器,主要是负责视图的刷新操作，也可以手动刷新 objectWillChange.send()
     @Published
     var listData: [BillModel] = [BillModel]()
     
@@ -21,10 +21,14 @@ class BillViewModel: ObservableObject{
     func addData(source: String,category:String,money: String) -> Void {
         let bill = BillModel(billName: source,billType: category,billMoney: money)
         listData.append(bill)
+        //通知视图刷新
+        objectWillChange.send()
     }
     
     func delete(indexSet: IndexSet) -> Void {
         listData.remove(atOffsets: indexSet)
+        //通知视图刷新
+//        objectWillChange.send()
     }
     
 }

@@ -42,7 +42,15 @@ struct WeChatSwiftUIApp: App {
 //            SwiftUI_OffSetAnimation() // 偏移动画
 //            SwiftUI_SpringAnimation() // 弹性动画
 //            SwiftUI_BoradAnimation() // 水波纹动画
-            SwiftUI_DisplayAndDismiss() //从无到有的动画
+//            SwiftUI_DisplayAndDismiss() //从无到有的动画
+            
+            //label
+//            SwiftUI_Label()
+            
+            //GridView
+//            SwiftUI_GridView()
+            //适配
+            SwiftUI_GeometryReaderView()
             
            
         }.onChange(of: scenePhase) { newValue in

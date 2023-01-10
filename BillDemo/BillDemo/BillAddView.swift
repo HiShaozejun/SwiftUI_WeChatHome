@@ -24,6 +24,9 @@ struct BillAddView: View {
     //传值的时候需要使用ObservedObject包装器修饰viewmodel
     @ObservedObject var viewModel: BillViewModel
     
+    //全局的环境中获取viewmodel，前提保证已经被注入
+//    @EnvironmentObject var viewModel: BillViewModel
+    
     var editModel: BillModel?
     // 是否编辑状态
     var isEditState:Bool {
@@ -41,7 +44,7 @@ struct BillAddView: View {
         
         Form {
             Section("账单名") {
-                TextField("收入或者支出来源", text: isEditState ? $tf_sources : $viewModel.listData[modelIndex!].billName ).focused($isFocus)
+                TextField("收入或者支出来源", text: $tf_sources).focused($isFocus)
             }
             Section("账单分类") {
                 
@@ -73,6 +76,11 @@ struct BillAddView: View {
                     
                     if(isEditState){
                         
+                        viewModel.listData[modelIndex!].billName = tf_sources;
+                        viewModel.listData[modelIndex!].billType = tf_picker;
+                        viewModel.listData[modelIndex!].billMoney = tf_money;
+                        dismissAction()
+                        
                     }else{
                         if (isValidData()){
                             viewModel.addData(source: tf_sources, category: tf_picker, money: tf_money)
@@ -91,11 +99,11 @@ struct BillAddView: View {
             isFocus = true
             
             //编辑初始值方法一：
-//            if(isEditState){
-//                tf_sources = (editModel?.billName)!
-//                tf_picker = (editModel?.billType)!
-//                tf_money = (editModel?.billMoney)!
-//            }
+            if(isEditState){
+                tf_sources = (editModel?.billName)!
+                tf_picker = (editModel?.billType)!
+                tf_money = (editModel?.billMoney)!
+            }
         }
         .navigationTitle(isEditState ? "编辑账单": "添加账单")
         .navigationBarTitleDisplayMode(.inline)

@@ -12,6 +12,9 @@ struct BillDemoApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+//            ContentView().environmentObject(BillViewModel())
+            
+//            SwipeContentView()
         }
     }
 }
