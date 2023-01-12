@@ -50,8 +50,10 @@ struct WeChatSwiftUIApp: App {
             //GridView
 //            SwiftUI_GridView()
             //适配
-            SwiftUI_GeometryReaderView()
-            
+//            SwiftUI_GeometryReaderView()
+
+            //Appstroage
+            SwiftUI_AppStorage()
            
         }.onChange(of: scenePhase) { newValue in
             //监听App的状态

@@ -28,7 +28,7 @@ struct PlanModel: Codable, Identifiable {
     解析遵循: Codable
     循环遵循: Identifiable
 */
-struct Plan: Codable {
+struct Plan: Codable, Identifiable {
 
     let id: Int
     let name: String
@@ -37,6 +37,8 @@ struct Plan: Codable {
     let hasBadge: Bool
     var members: [Member]?
 
+    var imageName: String { hasBadge ? "shenzhou\(id)" : "placeholder"}
+    
     enum CodingKeys: String, CodingKey {
         case id
         case name
@@ -46,7 +48,8 @@ struct Plan: Codable {
         case members
      }
 
-    struct Member: Codable {
+    struct Member: Codable, Identifiable {
+        let id = 1
         let name: String
         let birth: String
 
@@ -57,8 +60,8 @@ struct Plan: Codable {
 
         init(from decoder: Decoder) throws {
             let container: KeyedDecodingContainer<Plan.Member.CodingKeys> = try decoder.container(keyedBy: Plan.Member.CodingKeys.self)
-            self.name = try container.decode(String.self, forKey: Plan.Member.CodingKeys.name)
-            self.birth = try container.decode(String.self, forKey: Plan.Member.CodingKeys.birth)
+            self.name = try container.decode(String.self, forKey: .name)
+            self.birth = try container.decode(String.self, forKey: .birth)
         }
     }
     
@@ -69,7 +72,8 @@ struct Plan: Codable {
         self.launchDate = try container.decode(String.self, forKey: .launchDate)
         self.description = try container.decode(String.self, forKey: .description)
         self.hasBadge = try container.decode(Bool.self, forKey: .hasBadge)
-        self.members = try container.decode([Member].self, forKey: .members)
+//        self.members = try container.decode([Member].self, forKey: .members)
+        self.members = try container.decodeIfPresent([Member].self, forKey: .members)
     }
     
     

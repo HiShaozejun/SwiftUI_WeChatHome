@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
 
-let viewmodel = PlanViewModel()
+    let viewmodel = PlanViewModel()
 
     let coulums = [GridItem(.adaptive(minimum: 150),spacing: 10),GridItem(.adaptive(minimum: 150))]
 

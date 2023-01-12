@@ -35,6 +35,7 @@
 		83669CF3296D557600B7642E /* SwiftUI_Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CF2296D557600B7642E /* SwiftUI_Label.swift */; };
 		83669CF5296D72E900B7642E /* SwiftUI_GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CF4296D72E900B7642E /* SwiftUI_GridView.swift */; };
 		83669CF7296D9ED700B7642E /* SwiftUI_GeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CF6296D9ED700B7642E /* SwiftUI_GeometryReaderView.swift */; };
+		83B22BCD296EE6BA008EEB34 /* SwiftUI_AppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B22BCC296EE6BA008EEB34 /* SwiftUI_AppStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		83669CF2296D557600B7642E /* SwiftUI_Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Label.swift; sourceTree = "<group>"; };
 		83669CF4296D72E900B7642E /* SwiftUI_GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_GridView.swift; sourceTree = "<group>"; };
 		83669CF6296D9ED700B7642E /* SwiftUI_GeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_GeometryReaderView.swift; sourceTree = "<group>"; };
+		83B22BCC296EE6BA008EEB34 /* SwiftUI_AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_AppStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				83669CF2296D557600B7642E /* SwiftUI_Label.swift */,
 				83669CF4296D72E900B7642E /* SwiftUI_GridView.swift */,
 				83669CF6296D9ED700B7642E /* SwiftUI_GeometryReaderView.swift */,
+				83B22BCC296EE6BA008EEB34 /* SwiftUI_AppStorage.swift */,
 			);
 			path = "SwiftUI知识点";
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				83669C7B2966B91E00B7642E /* SwiftUI_ForEach.swift in Sources */,
 				83669C8F2966E42200B7642E /* MessageListView.swift in Sources */,
 				83669CC129686EFD00B7642E /* SwiftUI_Picker.swift in Sources */,
+				83B22BCD296EE6BA008EEB34 /* SwiftUI_AppStorage.swift in Sources */,
 				83669CB52966EF8600B7642E /* ContactsView.swift in Sources */,
 				83669C64296668FD00B7642E /* WeChatSwiftUIApp.swift in Sources */,
 				83669CC729695C3400B7642E /* SwiftUI_BoradAnimation.swift in Sources */,
