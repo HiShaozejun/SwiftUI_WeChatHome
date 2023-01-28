@@ -11,7 +11,12 @@ struct DetailView: View {
     
     let navTitle: String
     var body: some View {
-        Text("Hello, World!").navigationTitle(navTitle)
+        
+        NavigationLink {
+            
+        } label: {
+            Text("Hello, World!").navigationTitle(navTitle)
+        }
     }
 }
 

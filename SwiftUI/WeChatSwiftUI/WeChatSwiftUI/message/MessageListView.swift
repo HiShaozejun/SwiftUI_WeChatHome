@@ -12,6 +12,8 @@ import SwiftUI
  */
 struct MessageListView: View {
     
+    @EnvironmentObject private var stateBar: TabViewState
+    
     @State private var isShowDetail = false
     // 测试数据
     var message: [MessageInfoModel] = {
@@ -26,49 +28,50 @@ struct MessageListView: View {
     var body: some View {
         
         // 添加导航
-        NavigationView {
-
-            List(message) { message in
-                // push事件，NavigationLink包裹之后，会存在箭头，
-//                NavigationLink {
-//                    // 分离详情页
-//                    DetailView(navTitle: message.title)
-//                } label: {
-//                    // view抽离
-//                    ListRowView(message: message)
-//                }
+        if #available(iOS 16.0, *) {
+            NavigationView {
                 
-                //移除row右侧的箭头,三维空间堆叠，设置opacity
-                ZStack {
+                List(message) { message in
+                    // push事件，NavigationLink包裹之后，会存在箭头，
+                    //                NavigationLink {
+                    //                    // 分离详情页
+                    //                    DetailView(navTitle: message.title)
+                    //                } label: {
+                    //                    // view抽离
+                    //                    ListRowView(message: message)
+                    //                }
                     
-                    NavigationLink {
-                        DetailView(navTitle: message.title)
+                    //移除row右侧的箭头,三维空间堆叠，设置opacity
+                    ZStack {
+                        
+                        NavigationLink(isActive: $stateBar.taBarHidden) {
+                            DetailView(navTitle: message.title)
+                        } label: {
+                            EmptyView()
+                        }.opacity(0)
+                        
+                        ListRowView(message: message)
+                    }
+                } //设置List的样式，默认是卡片的样式，两边留有间距
+                .listStyle(.plain)
+                .navigationTitle(Text("WeChat"))//设置导航标题，默认为大标题，居左
+                .navigationBarTitleDisplayMode(.inline)//调整为居中的小标题
+                
+                //导航添加右侧按钮item
+                .toolbar {
+                    //带图标的button
+                    Button {
+                        print("button被点击了")
+
+                        
                     } label: {
-                        EmptyView()
-                    }.opacity(0)
-                    
-                    ListRowView(message: message)
+                        //存放button内容,例如使用系统图标库
+                        Image(systemName: "plus.circle").foregroundColor(.primary)
+                        
+                    }.padding(.horizontal,5)
                 }
-            } //设置List的样式，默认是卡片的样式，两边留有间距
-            .listStyle(.plain)
-            .navigationTitle(Text("WeChat"))//设置导航标题，默认为大标题，居左
-            .navigationBarTitleDisplayMode(.inline)//调整为居中的小标题
-            
-            //导航添加右侧按钮item
-            .toolbar {
-                //带图标的button
-                Button {
-                    print("button被点击了")
-//                     let add = MessageInfoModel(id: message.count + 1, iconName: "hanbook", title: "我是新添加的", subTitle: "我是副标题", date: "2023-12-12")
-                    
-                } label: {
-                    //存放button内容,例如使用系统图标库
-                    Image(systemName: "plus.circle").foregroundColor(.primary)
-                    
-                }.padding(.horizontal,5)
             }
-        }.onAppear{
-            
+            .toolbar(stateBar.taBarHidden ? .hidden : .automatic, for: .tabBar)
         }
     }
 }

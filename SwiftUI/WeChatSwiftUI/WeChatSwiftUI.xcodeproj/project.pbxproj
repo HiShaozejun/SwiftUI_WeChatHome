@@ -36,6 +36,7 @@
 		83669CF5296D72E900B7642E /* SwiftUI_GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CF4296D72E900B7642E /* SwiftUI_GridView.swift */; };
 		83669CF7296D9ED700B7642E /* SwiftUI_GeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83669CF6296D9ED700B7642E /* SwiftUI_GeometryReaderView.swift */; };
 		83B22BCD296EE6BA008EEB34 /* SwiftUI_AppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B22BCC296EE6BA008EEB34 /* SwiftUI_AppStorage.swift */; };
+		83B22BCF296FAE5A008EEB34 /* TabViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B22BCE296FAE5A008EEB34 /* TabViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		83669CF4296D72E900B7642E /* SwiftUI_GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_GridView.swift; sourceTree = "<group>"; };
 		83669CF6296D9ED700B7642E /* SwiftUI_GeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_GeometryReaderView.swift; sourceTree = "<group>"; };
 		83B22BCC296EE6BA008EEB34 /* SwiftUI_AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_AppStorage.swift; sourceTree = "<group>"; };
+		83B22BCE296FAE5A008EEB34 /* TabViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				83669C822966DCE200B7642E /* message */,
 				83669C63296668FD00B7642E /* WeChatSwiftUIApp.swift */,
 				83669C8C2966E37700B7642E /* TabMenu.swift */,
+				83B22BCE296FAE5A008EEB34 /* TabViewState.swift */,
 				83669C772966B8FE00B7642E /* SwiftUI知识点 */,
 				83669C67296668FE00B7642E /* Assets.xcassets */,
 				83669C69296668FE00B7642E /* Preview Content */,
@@ -252,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B22BCF296FAE5A008EEB34 /* TabViewState.swift in Sources */,
 				83669CF3296D557600B7642E /* SwiftUI_Label.swift in Sources */,
 				83669CC5296917C200B7642E /* SwiftUI_Animation.swift in Sources */,
 				83669C8D2966E37700B7642E /* TabMenu.swift in Sources */,

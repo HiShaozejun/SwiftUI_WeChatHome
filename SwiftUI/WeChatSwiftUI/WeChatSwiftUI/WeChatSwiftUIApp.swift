@@ -25,7 +25,8 @@ struct WeChatSwiftUIApp: App {
         //window窗口
         WindowGroup {
             //wechat demo
-//            TabMenu()
+            TabMenu()
+                .environmentObject(TabViewState())
             
             //表单demo
 //            MyTextField()
@@ -53,9 +54,10 @@ struct WeChatSwiftUIApp: App {
 //            SwiftUI_GeometryReaderView()
 
             //Appstroage
-            SwiftUI_AppStorage()
+//            SwiftUI_AppStorage()
            
-        }.onChange(of: scenePhase) { newValue in
+        }
+        .onChange(of: scenePhase) { newValue in
             //监听App的状态
             switch newValue {
             case .background:
@@ -90,6 +92,17 @@ class AppDelegate: NSObject,UIApplicationDelegate {
         appConfig()
         
         return true
+    }
+    
+    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+        
+        let configuration = UISceneConfiguration(
+                                             name: nil,
+                                             sessionRole: connectingSceneSession.role)
+         if connectingSceneSession.role == .windowApplication {
+             configuration.delegateClass = MySceneDelegate.self
+         }
+         return configuration
     }
     
     /**
@@ -130,6 +143,35 @@ class AppDelegate: NSObject,UIApplicationDelegate {
     }
 }
 
+class MySceneDelegate: NSObject, UIWindowSceneDelegate, ObservableObject {
+    
+    var window: UIWindow?
+    
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+       
+        let contentView = TabMenu()
+        if let windowScene = scene as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            let tabBar = TabViewState()
+            window.rootViewController = UIHostingController(rootView: contentView.environmentObject(tabBar))
+            self.window = window
+            
+            //监听TabBarState
+            
+//            let pub = tabBar.$taBarHidden.receive(on: DispatchQueue.main).sink { output in
+//                print(output)
+//            }
+            
+//            tabBar.$taBarHidden.receive(subscriber: AnySubscriber(receive))
+        }
+    }
+    
+    func tabBarHidden(hidden: Bool) {
+        
+        
+    }
+    
+}
 
 
 
